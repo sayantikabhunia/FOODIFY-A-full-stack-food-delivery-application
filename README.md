@@ -59,33 +59,60 @@ foodify/
 
 ```
 
-## 🔧 Setup Instructions
+## ⚙️ Setup Instructions
 
-### 1. Clone the Repo
+### 1. 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/foodify.git
 cd foodify
+```
 
-### Backend Setup
+---
+
+### 2. 🔧 Backend Setup
 
 ```bash
 cd backend
 npm install
-# Create a .env file with the following:
-# MONGO_URI=<your_mongo_connection>
-# JWT_SECRET=your_secret_key
-# STRIPE_SECRET_KEY=your_stripe_key
-npm run dev
+```
 
-###Create a .env file inside /backend and add:
+📝 **Create a `.env` file inside the `backend/` folder and add:**
 
-```bash
+```env
 PORT=4000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myfoodapp?retryWrites=true&w=majority
 JWT_SECRET=your_secret_key
 STRIPE_SECRET_KEY=sk_test_your_stripe_key
+```
 
-###Replace <username>, <password>, and keys accordingly.
+🔁 **Replace `<username>`, `<password>`, and keys with your actual credentials.**
 
+Then start the backend server:
 
+```bash
+npm run dev
+```
+
+---
+
+### 3. 💻 Frontend Setup
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+This will start the frontend on:
+
+```
+http://localhost:5173
+```
+
+---
+
+✅ Your project is now running on:
+
+- **Frontend**: `http://localhost:5173`
+- **Backend API**: `http://localhost:4000`
