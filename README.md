@@ -43,17 +43,18 @@ Foodify is a full-stack food ordering system built using the MERN stack (MongoDB
 ## 📂 Folder Structure
 foodify/
 ├── backend/
-│ ├── config/ # MongoDB connection setup
-│ ├── middleware/ # JWT auth middleware
-│ ├── models/ # Mongoose schemas
-│ ├── routes/ # API routes
-│ ├── uploads/ # Uploaded food images
-│ └── server.js # Entry point
+│   ├── config/         # MongoDB connection setup
+│   ├── middleware/     # JWT auth middleware
+│   ├── models/         # Mongoose schemas
+│   ├── routes/         # API routes
+│   ├── uploads/        # Uploaded food images
+│   └── server.js       # Entry point
 ├── frontend/
-│ ├── pages/ # React pages (Home, Cart, Admin, etc.)
-│ ├── components/ # Reusable UI components
-│ └── App.jsx # Main app setup
-└── README.md # Project documentation
+│   ├── pages/          # React pages (Home, Cart, Admin, etc.)
+│   ├── components/     # Reusable UI components
+│   └── App.jsx         # Main app setup
+└── README.md           # Project documentation
+
 
 
 ---
