@@ -1,140 +1,118 @@
- # Food Ordering Web App (MERN Stack)
+# Foodify – Food Delivery App
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)# Food Ordering Web App (MERN Stack)
-## demo :
-front : https://heartfelt-swan-8f77f0.netlify.app/
-admin : https://glittering-pixie-1633ef.netlify.app/
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [Contact](#contact)
+Foodify is a full-stack food ordering system built using the MERN stack (MongoDB, Express, React, Node.js) with Stripe integration for online payments. It supports both customer-facing features and an admin dashboard to manage food listings and orders.
 
-## Introduction
-This is a full-stack food ordering web application built using the MERN stack (MongoDB, Express, React, Node.js). The application consists of a customer-facing app for ordering food and an admin app for managing orders, menu items, and more.
+---
 
-## Features
-- User authentication and authorization
+## ✨ Features
+
+### 👤 User
+- User registration & JWT-based authentication
 - Browse food items
-- Add items to the cart and place orders
-- Stripe Payment Integration: Secure and reliable payment processing using Stripe.
-- Order tracking
-- Admin panel to manage menu items, orders
+- Add to cart & real-time cart total
+- Place orders with:
+  - Cash on Delivery
+  - Online Payment via Stripe
+- Order confirmation with address & payment info
 
-## Technologies Used
-- **Frontend:** React.js, React Context API, React Router
-- **Backend:** Node.js, Express.js
-- **Payment Gateway:** Stripe
-- **Database:** MongoDB
-- **Authentication:** JWT (JSON Web Tokens)
-- **Styling:** CSS
+### 🛠️ Admin
+- Add/Edit/Delete food items
+- Manage uploaded food images (via multer)
+- Access order database
+- Protected admin routes with JWT auth
 
-## Installation
-### Prerequisites
-- Node.js
-- MongoDB
+---
 
-### Clone the Repository
-```sh
-git clone https://github.com/saidul-122/food-delevary-application
-cd mern-food-delivery-app
+## 💻 Tech Stack
+
+| Tech        | Purpose                          |
+|-------------|----------------------------------|
+| React       | Frontend UI                      |
+| Node.js     | Backend server                   |
+| Express     | API routing                      |
+| MongoDB     | NoSQL database                   |
+| Mongoose    | MongoDB ORM                      |
+| Stripe      | Secure online payments           |
+| Multer      | File uploads (images)            |
+| JWT         | Token-based authentication       |
+| dotenv      | Env variable management          |
+| Nodemon     | Auto server restart on changes   |
+
+---
+
+## 📂 Folder Structure
+```
+foodify/
+├── backend/
+│   ├── config/         # MongoDB connection setup
+│   ├── middleware/     # JWT auth middleware
+│   ├── models/         # Mongoose schemas
+│   ├── routes/         # API routes
+│   ├── uploads/        # Uploaded food images
+│   └── server.js       # Entry point
+├── frontend/
+│   ├── pages/          # React pages (Home, Cart, Admin, etc.)
+│   ├── components/     # Reusable UI components
+│   └── App.jsx         # Main app setup
+└── README.md           # Project documentation
+
+
 ```
 
-## Backend Setup
-Navigate to the backend directory:
+## ⚙️ Setup Instructions
 
-```sh
+### 1. 📥 Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/foodify.git
+cd foodify
+```
+
+---
+
+### 2. 🔧 Backend Setup
+
+```bash
 cd backend
-
-```
-Install dependencies:
-
-```sh
 npm install
 ```
 
-Create a .env file in the backend directory and add the following:
+📝 **Create a `.env` file inside the `backend/` folder and add:**
 
-```sh
-
+```env
+PORT=4000
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myfoodapp?retryWrites=true&w=majority
+JWT_SECRET=your_secret_key
+STRIPE_SECRET_KEY=sk_test_your_stripe_key
 ```
 
-Start the backend server:
+🔁 **Replace `<username>`, `<password>`, and keys with your actual credentials.**
 
-```sh
-npm run server
-```
-## Frontend Setup
-Navigate to the frontend directory:
+Then start the backend server:
 
-```sh
-
-cd frontend
-```
-
-Install dependencies:
-```sh
-
-npm install
-```
-
-Start the frontend server:
-```sh
-
+```bash
 npm run dev
 ```
 
-## Admin App Setup
+---
 
-Navigate to the admin directory:
-```sh
+### 3. 💻 Frontend Setup
 
-cd admin
-```
-
-Install dependencies:
-
-```sh
+```bash
+cd ../frontend
 npm install
-```
-
-Start the admin app :
-```sh
 npm run dev
 ```
 
+This will start the frontend on:
 
-## API Documentation
-The API endpoints for the backend can be documented using tools like Postman or Swagger. Include endpoints for user authentication, menu items, orders, and more.
+```
+http://localhost:5173
+```
 
-## Contributing
-Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to follow the code style and include relevant tests.
+---
 
-## Contact
-For any questions or suggestions, feel free to contact me.
+✅ Your project is now running on:
 
-Happy coding!
-
-Feel free to customize this template according to your specific project details and requirements.
-
-## API Documentation
-The API endpoints for the backend can be documented using tools like Postman or Swagger. Include endpoints for user authentication, menu items, orders, and more.
-
-## Contributing
-Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to follow the code style and include relevant tests.
-
-## Contact
-For any questions or suggestions, feel free to contact me.
-
-Happy coding!
-
-Feel free to customize this template according to your specific project details and requirements.
-
+- **Frontend**: `http://localhost:5173`
+- **Backend API**: `http://localhost:4000`
