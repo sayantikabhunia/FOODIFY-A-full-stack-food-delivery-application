@@ -58,9 +58,8 @@ foodify/
 
 
 
----
 
-## 🔧 Setup Instructions
+### 🔧 Setup Instructions
 
 ### 1. Clone the Repo
 
