@@ -57,9 +57,9 @@ foodify/
 └── README.md           # Project documentation
 
 
+```
 
-
-### 🔧 Setup Instructions
+## 🔧 Setup Instructions
 
 ### 1. Clone the Repo
 
