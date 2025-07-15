@@ -41,6 +41,7 @@ Foodify is a full-stack food ordering system built using the MERN stack (MongoDB
 ---
 
 ## 📂 Folder Structure
+```
 foodify/
 ├── backend/
 │   ├── config/         # MongoDB connection setup
